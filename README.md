@@ -15,7 +15,7 @@ The site uses plain HTML and CSS. It has no build step, package manager, or Jeky
 - `cv.html` — CV downloads and PDF preview
 - `contact.html` — LSU contact information and academic profiles
 - `assets/styles.css` — site-wide design and responsive layout
-- `assets/og.png` — social-preview image used when the site is shared
+- `assets/og.jpg` — social-preview image used when the site is shared
 - `assets/profile-placeholder.svg` — temporary profile image
 - `assets/files/Yaghoub_Rahimi_CV.pdf` — downloadable CV
 - `assets/files/Yaghoub_Rahimi_CV.tex` — CV LaTeX source
