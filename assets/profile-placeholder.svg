@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" role="img" aria-label="Profile photo placeholder">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f1eef7"/>
+      <stop offset="1" stop-color="#e4dcef"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="480" fill="url(#g)"/>
+  <circle cx="240" cy="170" r="76" fill="#6b4e9b" opacity="0.85"/>
+  <path d="M105 415c22-92 86-140 135-140s113 48 135 140" fill="#6b4e9b" opacity="0.85"/>
+  <text x="240" y="452" text-anchor="middle" font-family="Georgia,serif" font-size="26" fill="#4a3a63">Yaghoub Rahimi</text>
+</svg>

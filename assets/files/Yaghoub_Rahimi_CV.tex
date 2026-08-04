@@ -1,0 +1,358 @@
+\documentclass[11pt,letterpaper]{article}
+
+% =============================================================
+% A clean academic CV written from scratch.
+% Compile with: pdflatex Yaghoub_Rahimi_CV.tex
+% =============================================================
+
+% ---------- Encoding and typography ----------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+
+% ---------- Page layout ----------
+\usepackage[
+  letterpaper,
+  top=0.50in,
+  bottom=0.52in,
+  left=0.72in,
+  right=0.72in
+]{geometry}
+
+% ---------- Lists, tables, and section headings ----------
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{titlesec}
+\usepackage{xcolor}
+
+% ---------- Links ----------
+\usepackage[hidelinks]{hyperref}
+\urlstyle{same}
+
+% ---------- Footer ----------
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyfoot[C]{\small Yaghoub Rahimi \hspace{0.5em}|\hspace{0.5em} Curriculum Vitae \hspace{0.5em}|\hspace{0.5em} \thepage}
+\setlength{\footskip}{20pt}
+
+% ---------- General document formatting ----------
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\raggedbottom
+
+\definecolor{sectionblue}{RGB}{35,64,92}
+
+\titleformat{\section}
+  {\large\bfseries\color{sectionblue}}
+  {}{0pt}{}
+  [\color{sectionblue}\titlerule]
+\titlespacing*{\section}{0pt}{0.72em}{0.32em}
+
+\titleformat{\subsection}
+  {\normalsize\bfseries}
+  {}{0pt}{}
+\titlespacing*{\subsection}{0pt}{0.38em}{0.10em}
+
+\setlist[itemize]{
+  leftmargin=1.25em,
+  label=\textbullet,
+  itemsep=0.10em,
+  topsep=0.12em,
+  parsep=0pt,
+  partopsep=0pt
+}
+
+\setlist[enumerate]{
+  leftmargin=1.65em,
+  itemsep=0.38em,
+  topsep=0.15em,
+  parsep=0pt,
+  partopsep=0pt
+}
+
+% =============================================================
+% USER-EDITABLE INFORMATION
+% Change these definitions without touching the document layout.
+% =============================================================
+\newcommand{\CVName}{Yaghoub Rahimi}
+\newcommand{\CVTitle}{Postdoctoral Researcher in Mathematics}
+\newcommand{\CVDepartment}{Department of Mathematics, Louisiana State University}
+\newcommand{\CVEmail}{yrahim1@lsu.edu}
+\newcommand{\CVScholarURL}{https://scholar.google.com/citations?user=u2n-iosAAAAJ&hl=en}
+\newcommand{\CVWebsiteURL}{https://yaghoub-rahimi.github.io/}
+\newcommand{\CVORCIDURL}{https://orcid.org/0000-0001-9597-3187}
+
+\newcommand{\DissertationTitle}{Improving averages over the prime numbers and Goldbach's conjecture}
+
+% =============================================================
+% REUSABLE COMMANDS
+% =============================================================
+
+% Institution or position entry:
+% #1 = title/institution, #2 = date, #3 = location/subtitle, #4 = details
+\newcommand{\cventry}[4]{%
+  \begin{tabularx}{\textwidth}{@{}X>{\raggedleft\arraybackslash}p{1.90in}@{}}
+    \textbf{#1} & \textit{#2} \\
+  \end{tabularx}
+  \if\relax\detokenize{#3}\relax\else
+    \textit{#3}\par
+  \fi
+  \if\relax\detokenize{#4}\relax\else
+    #4\par
+  \fi
+  \vspace{0.38em}
+}
+
+% Talk entry:
+% #1 = title, #2 = event, #3 = place, #4 = date
+\newcommand{\talkentry}[4]{%
+  \begin{tabularx}{\textwidth}{@{}X>{\raggedleft\arraybackslash}p{1.2in}@{}}
+    \textbf{#1} & \textit{#4} \\
+  \end{tabularx}
+  #2, #3.\par\vspace{0.28em}
+}
+
+% Course entry:
+% #1 = course, #2 = institution, #3 = term
+\newcommand{\courseentry}[3]{%
+  \begin{tabularx}{\textwidth}{@{}X>{\raggedleft\arraybackslash}p{1.2in}@{}}
+    \textbf{#1}, #2 & \textit{#3} \\
+  \end{tabularx}\par
+}
+
+% Compact link labels used in publications.
+\newcommand{\journallink}[1]{\href{#1}{Journal}}
+\newcommand{\arxivlink}[1]{\href{#1}{arXiv}}
+
+\begin{document}
+
+% =============================================================
+% HEADER
+% =============================================================
+\begin{center}
+  {\LARGE\bfseries \CVName}\\[3pt]
+  {\large \CVTitle}\\[1pt]
+  \CVDepartment\\[5pt]
+  \href{mailto:\CVEmail}{\CVEmail}
+  \quad | \quad
+  \href{\CVScholarURL}{Google Scholar}
+  \quad | \quad \href{\CVWebsiteURL}{Website}
+  \quad | \quad \href{\CVORCIDURL}{ORCID}
+\end{center}
+
+\vspace{-0.45em}
+
+% =============================================================
+\section{Academic Appointments}
+
+\cventry
+  {Louisiana State University}
+  {August 2025--Present}
+  {Postdoctoral Researcher in Mathematics, Baton Rouge, Louisiana}
+  {Research in analytic number theory and discrete harmonic analysis.}
+
+% =============================================================
+\section{Education}
+
+\cventry
+  {Ph.D. in Mathematics}
+  {August 2025}
+  {Georgia Institute of Technology, Atlanta, Georgia}
+  {Dissertation: \textit{\DissertationTitle}. Advisor: Michael T. Lacey.}
+
+\cventry
+  {M.S. in Mathematics}
+  {August 2016--July 2019}
+  {The University of Texas at Dallas, Richardson, Texas}
+  {Advisor: Yifei Lou.}
+
+\cventry
+  {M.S. in Mathematics}
+  {September 2013--January 2016}
+  {Sharif University of Technology, Tehran, Iran}
+  {Advisor: Ali Daneshgar.}
+
+\cventry
+  {B.S. in Applied Mathematics}
+  {September 2009--2013}
+  {Shiraz University, Shiraz, Iran}
+  {}
+
+% =============================================================
+\section{Research Interests}
+
+Analytic number theory; discrete harmonic analysis; additive combinatorics;
+prime numbers; Hardy--Littlewood circle method; arithmetic progressions;
+restricted-digit problems.
+
+% =============================================================
+\section{Publications}
+
+\subsection{Published and Accepted Articles}
+
+\begin{enumerate}
+
+\item M. T. Lacey, H. Mousavi, \textbf{Y. Rahimi}, and M. N. Vempati,
+``A density theorem for higher-order sums of prime numbers,''
+\textit{Research in the Mathematical Sciences} \textbf{13} (2026), Article 17.
+\journallink{https://doi.org/10.1007/s40687-025-00597-5}
+\,|\,
+\arxivlink{https://arxiv.org/abs/2411.01296}
+
+\item \textbf{Y. Rahimi}, S. H. Kang, and Y. Lou,
+``A lifted $\ell_1$ framework for sparse recovery,''
+\textit{Information and Inference: A Journal of the IMA} \textbf{13} (2024), no.~1, iaad055.
+\journallink{https://doi.org/10.1093/imaiai/iaad055}
+\,|\,
+\arxivlink{https://arxiv.org/abs/2203.05125}
+
+\item M. T. Lacey, H. Mousavi, and \textbf{Y. Rahimi},
+``Endpoint $\ell^r$ improving estimates for prime averages,''
+\textit{Mathematical Research Letters} \textbf{29} (2022), no.~6, 1767--1791.
+\journallink{https://doi.org/10.4310/MRL.2022.v29.n6.a6}
+\,|\,
+\arxivlink{https://arxiv.org/abs/2101.10401}
+
+\item C. Giannitsi, M. T. Lacey, H. Mousavi, and \textbf{Y. Rahimi},
+``Improving and maximal inequalities for primes in progressions,''
+\textit{Banach Journal of Mathematical Analysis} \textbf{16} (2022), Article 42.
+\journallink{https://doi.org/10.1007/s43037-022-00191-9}
+\,|\,
+\arxivlink{https://arxiv.org/abs/2112.07700}
+
+\item C. Wang, M. Yan, \textbf{Y. Rahimi}, and Y. Lou,
+``Accelerated schemes for the $L_1/L_2$ minimization,''
+\textit{IEEE Transactions on Signal Processing} \textbf{68} (2020), 2660--2669.
+\journallink{https://doi.org/10.1109/TSP.2020.2985298}
+\,|\,
+\arxivlink{https://arxiv.org/abs/1905.08946}
+
+\item \textbf{Y. Rahimi}, C. Wang, H. Dong, and Y. Lou,
+``A scale-invariant approach for sparse signal recovery,''
+\textit{SIAM Journal on Scientific Computing} \textbf{41} (2019), no.~6, A3649--A3672.
+\journallink{https://doi.org/10.1137/18M123147X}
+\,|\,
+\arxivlink{https://arxiv.org/abs/1812.08852}
+
+\end{enumerate}
+
+\subsection{Preprints}
+
+\begin{enumerate}[resume]
+
+\item R. Han and \textbf{Y. Rahimi},
+``On the small denominator problem for generalized Minkowski--Funk transforms,''
+preprint.
+\arxivlink{https://arxiv.org/abs/2601.09547}
+
+\item C. Giannitsi, B. Krause, M. T. Lacey, H. Mousavi, and \textbf{Y. Rahimi},
+``Averages over the Gaussian primes: Goldbach's conjecture and improving estimates,''
+preprint.
+\arxivlink{https://arxiv.org/abs/2309.14249}
+
+% Add new preprints here, newest first.
+
+\end{enumerate}
+
+% =============================================================
+\section{Selected Research Talks}
+
+\talkentry
+  {A Density Theorem for Higher-Order Sums of Prime Numbers}
+  {Southern Regional Number Theory Conference}
+  {Louisiana State University, Baton Rouge, Louisiana}
+  {March 2025}
+
+\talkentry
+  {Averages over the Gaussian Primes: Improving Estimates and Goldbach's Conjecture}
+  {Number Theory Seminar}
+  {Louisiana State University, online}
+  {February 2024}
+
+\talkentry
+  {Explicit Construction of RIP Matrices and Related Problems}
+  {Heat Flow, Two-Point Inequalities, and Beyond Summer School}
+  {online workshop}
+  {October 2023}
+
+\talkentry
+  {Endpoint $\ell^p$ Improving Estimates for Prime Averages}
+  {Combinatorial and Additive Number Theory Seminar (CANT)}
+  {online seminar}
+  {May 2021}
+
+\talkentry
+  {A Scale-Invariant Approach for Sparse Signal Recovery}
+  {Poster presentation}
+  {The University of Texas at Dallas, Richardson, Texas}
+  {Spring 2019}
+
+% Add newer talks above these entries.
+
+% =============================================================
+\section{Teaching Experience}
+
+\subsection{Instructor of Record}
+
+% Add LSU courses here. Example:
+% \courseentry{MATH 2057: Multidimensional Calculus}{Louisiana State University}{Spring 2026}
+
+\courseentry{MATH 1554: Linear Algebra}{Georgia Institute of Technology}{Fall 2023}
+\courseentry{MATH 2551: Multivariable Calculus}{Georgia Institute of Technology}{Summer 2023}
+
+\subsection{Teaching Assistant}
+
+\cventry
+  {Georgia Institute of Technology}
+  {Fall 2019--Spring 2025}
+  {}
+  {Differential Equations; Abstract Algebra I--II; Multivariable Calculus.}
+
+\cventry
+  {The University of Texas at Dallas}
+  {Fall 2016--Summer 2019}
+  {}
+  {Topology; Differential Calculus; Applied Calculus I--II; Calculus I--II.}
+
+\cventry
+  {Shiraz University}
+  {Fall 2010--Spring 2013}
+  {}
+  {Foundations of Geometry; Linear Algebra I; Introduction to Computing and Programming; Elementary Matrix and Linear Algebra; Foundations of Mathematics.}
+
+% =============================================================
+\section{Honors and Awards}
+
+\begin{itemize}
+  \item Outstanding Teaching Assistant Award, Georgia Institute of Technology, April 2025.
+  \item Research Prize, supported by NSF Grant DMS-1949206, Georgia Institute of Technology, Spring 2021.
+  \item David L. Brown Fellowship Award, Georgia Institute of Technology, April 2020.
+  \item Bronze Medal, 20th International Mathematics Competition for University Students, Blagoevgrad, Bulgaria, August 2013.
+  \item Gold Medal, 37th Iranian Mathematics Competition, Semnan University, Iran, February 2013.
+  \item Fifth Place, 18th Iranian Mathematics Olympiad for University Students, Tarbiat Modares University, Tehran, Iran, July 2013.
+  \item Thirteenth Place, ACM International Collegiate Programming Contest, Asia Regional -- Tehran Site, December 2012.
+  \item Second Place, Shiraz ACM-ICPC Contest, Shiraz University, October 2012.
+\end{itemize}
+
+% =============================================================
+\section{Mentoring and Academic Service}
+
+\begin{itemize}
+  \item Mentor, Directed Research Program, The University of Texas at Dallas, Fall 2018, Spring 2019, and Fall 2019.
+  \item Member, Organizing Committee, Workshop on Recent Developments in Mathematical and Statistical Approaches in Data Science, The University of Texas at Dallas, May 31--June 2, 2019.
+  \item Coach, Shiraz University team, 39th Iranian Mathematics Competition, Yazd University, May 2015.
+  \item Mathematics Olympiad Instructor, high schools in Shiraz, Iran, 2012.
+\end{itemize}
+
+% =============================================================
+\section{Professional Membership and Technical Skills}
+
+\textbf{Professional membership:} Member, American Mathematical Society, 2019--Present.\\[0.25em]
+\textbf{Technical skills:} \LaTeX; Python; MATLAB; Mathematica; R; C/C++.
+
+\end{document}
