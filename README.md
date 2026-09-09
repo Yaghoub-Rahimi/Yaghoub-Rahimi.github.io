@@ -6,7 +6,7 @@ The site uses plain HTML and CSS. It has no build step, package manager, or Jeky
 
 ## Site files
 
-- `index.html` — biography, research interests, recent news, and selected publications
+- `index.html` — biography, research interests, and recent news
 - `research.html` — research themes
 - `publications.html` — publications and preprints
 - `talks.html` — selected talks in reverse chronological order
@@ -81,7 +81,7 @@ Add the newest item to the appropriate ordered list in `publications.html`. Use 
 </li>
 ```
 
-If the paper should also be highlighted on the homepage, add a shorter version to the selected-publications list in `index.html`.
+Announce a new paper at the top of the Recent news list in `index.html`, with the posting date, title, coauthors, and arXiv link. If it develops a research theme, update the relevant paragraph in `research.html` and link to the publication entry using its `id`.
 
 ### Add a talk
 
