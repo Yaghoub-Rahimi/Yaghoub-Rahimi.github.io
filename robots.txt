@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yaghoub-rahimi.github.io/sitemap.xml
