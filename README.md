@@ -6,7 +6,7 @@ The site uses plain HTML and CSS. It has no build step, package manager, or Jeky
 
 ## Site files
 
-- `index.html` — biography, research interests, recent news, and selected publications
+- `index.html` — biography, research interests, and recent news
 - `research.html` — research themes
 - `publications.html` — publications and preprints
 - `talks.html` — selected talks in reverse chronological order
@@ -14,7 +14,10 @@ The site uses plain HTML and CSS. It has no build step, package manager, or Jeky
 - `notes.html` — placeholder for future notes
 - `cv.html` — CV downloads and PDF preview
 - `contact.html` — LSU contact information and academic profiles
+- `404.html` — a helpful page for missing addresses on GitHub Pages
+- `sitemap.xml` and `robots.txt` — public-page discovery for search engines
 - `assets/styles.css` — site-wide design and responsive layout
+- `assets/favicon.svg` — small YR icon for browser tabs
 - `assets/og.jpg` — social-preview image used when the site is shared
 - `assets/profile-placeholder.svg` — temporary profile image
 - `assets/files/Yaghoub_Rahimi_CV.pdf` — downloadable CV
@@ -25,16 +28,18 @@ The site uses plain HTML and CSS. It has no build step, package manager, or Jeky
 From the repository root, run:
 
 ```bash
-python3 -m http.server 8000
+python3 -m http.server 8000 --bind 127.0.0.1
 ```
 
-Then open `http://localhost:8000/`. Stop the server with `Ctrl+C`.
+Then open `http://127.0.0.1:8000/`. Stop the server with `Ctrl+C`.
 
 ## Edit content
 
-The navigation, sidebar, and footer are repeated in each HTML file so that the site remains build-free. When changing shared information such as the email address or job title, update all eight HTML pages. Searching the project for the old text is the safest way to find every copy.
+The navigation, sidebar, and footer are repeated in each HTML file so that the site remains build-free. When changing shared information such as the email address or job title, update all eight content pages; keep the navigation on `404.html` in sync too. Searching the project for the old text is the safest way to find every copy. Update the affected pages' footer dates when reviewing their content, and add any new public page to `sitemap.xml`.
 
 Unconfirmed content is marked with `TODO(content)` inside HTML comments. These comments are not visible on the published site.
+
+After changing the shared CSS, update the `?v=...` value in every stylesheet link so returning visitors receive the new styling.
 
 ### Replace the profile photo
 
@@ -62,12 +67,21 @@ Replace these files while keeping their filenames unchanged:
 
 Keeping the filenames preserves links from the homepage, sidebar, CV page, and contact page. If the LaTeX source changes, compile it before committing so the PDF and source stay synchronized.
 
+With a LaTeX distribution installed, compile twice from the `assets/files/` folder:
+
+```bash
+pdflatex -no-shell-escape -interaction=nonstopmode -halt-on-error Yaghoub_Rahimi_CV.tex
+pdflatex -no-shell-escape -interaction=nonstopmode -halt-on-error Yaghoub_Rahimi_CV.tex
+```
+
+Check the resulting PDF's page breaks and links, and update its explicit date and the date shown on `cv.html`. On phones, the CV page offers direct PDF links instead of a small embedded viewer.
+
 ### Add a publication
 
 Add the newest item to the appropriate ordered list in `publications.html`. Use the title-first format:
 
 ```html
-<li>
+<li id="short-paper-name">
   <div class="publication-title">Paper title</div>
   <div class="authors">Coauthor One and <span class="me">Yaghoub Rahimi</span></div>
   <div class="venue"><em>Journal Name</em> volume, pages, year.</div>
@@ -81,7 +95,9 @@ Add the newest item to the appropriate ordered list in `publications.html`. Use 
 </li>
 ```
 
-If the paper should also be highlighted on the homepage, add a shorter version to the selected-publications list in `index.html`.
+Announce a new paper at the top of the Recent news list in `index.html`, with the posting date, title, coauthors, and arXiv link. If it develops a research theme, update the relevant paragraph in `research.html` and link to the publication entry using its `id`.
+
+Add the same citation to `assets/files/Yaghoub_Rahimi_CV.tex` and rebuild the PDF. Use “Preprint” unless a journal status has been confirmed.
 
 ### Add a talk
 
@@ -101,7 +117,7 @@ Link the event name or slides only when a stable public URL is available.
 
 ## GitHub Pages deployment
 
-The preferred user-site repository is `yaghoub-rahimi.github.io` under the `Yaghoub-Rahimi` account. GitHub's documentation requires lowercase letters in the repository name for a user site. After this pull request is merged into `main`:
+This site is hosted from `Yaghoub-Rahimi/Yaghoub-Rahimi.github.io`. Review changes on a separate branch and merge the pull request when ready to publish. The existing Pages configuration deploys from the root of `main`; if configuring it again:
 
 1. Open the repository on GitHub.
 2. Select **Settings** → **Pages**.
@@ -109,6 +125,6 @@ The preferred user-site repository is `yaghoub-rahimi.github.io` under the `Yagh
 4. Select the `main` branch and the `/(root)` folder, then click **Save**.
 5. Wait for the Pages deployment to finish. GitHub shows the deployment status and published URL on the same page.
 
-For a repository named `yaghoub-rahimi.github.io`, the site URL is `https://yaghoub-rahimi.github.io/`. If the files are instead placed in a project repository, the default URL is `https://yaghoub-rahimi.github.io/REPOSITORY-NAME/`.
+The published URL is `https://yaghoub-rahimi.github.io/`. Canonical links, the sitemap, and the root-relative base in `404.html` are configured for this address. Update them if moving the site to a different domain or a project subdirectory.
 
 The `.nojekyll` file tells GitHub Pages to serve this repository as plain static files. No GitHub Actions workflow is required for this site.

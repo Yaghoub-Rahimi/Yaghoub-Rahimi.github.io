@@ -4,6 +4,7 @@
 \usepackage{amsmath, amsthm, amscd, amsfonts, amssymb, graphicx, color}
 \usepackage{paralist}
 \usepackage{multicol}
+\usepackage{needspace}
 \makeatletter
 \newlength{\bibhang}
 \setlength{\bibhang}{1em}
@@ -50,7 +51,9 @@
 \definecolor{darkblue}{rgb}{0.0,0.0,0.7}
 \hypersetup{colorlinks,breaklinks,
             linkcolor=darkblue,urlcolor=darkblue,
-            anchorcolor=darkblue,citecolor=darkblue}
+            anchorcolor=darkblue,citecolor=darkblue,
+            pdftitle={Yaghoub Rahimi -- Curriculum Vitae},
+            pdfauthor={Yaghoub Rahimi}}
 
 \makeatletter
 \newcommand{\makeheading}[1]
@@ -73,7 +76,7 @@
 %         }
 
 \usepackage{titlesec} % Used to customize the \section command
-\titleformat{\section}{\Large\bf\scshape \raggedright }{}{0em}{}[\titlerule] % Text formatting of sections
+\titleformat{\section}{\Large\bfseries\raggedright}{}{0em}{}[\titlerule] % Text formatting of sections
 \titlespacing{\section}{0pt}{3pt}{3pt} % Spacing around sections
 
 \newenvironment{outerlist}[1][\enskip\textbullet]
@@ -98,6 +101,15 @@
 \newcommand\doilink[1]{\href{http://dx.doi.org/#1}{#1}}
 \newcommand\doi[1]{doi:\doilink{#1}}
 
+\newcommand{\publication}[4]{%
+    \item \begin{minipage}[t]{\linewidth}
+        \textit{#1}\\
+        with #2\\
+        #3\\
+        #4
+    \end{minipage}}
+
+\date{September 2026}
 
 \begin{document}
 %\center{{\Large\bf Yaghoub Rahimi}
@@ -114,7 +126,7 @@ Louisiana State University, & \hspace{0.5in}  Email: yrahim1@lsu.edu
 % \\
  % URL: \href{http://people.math.gatech.edu/~yrahimi6}{https://math.gatech.edu/people/yaghoub-rahimi} & \hspace{0.5in} Tel: 4699867163
 \\
-& \hspace{0.5in}  \href{https://scholar.google.com/citations?user=u2n-iosAAAAJ&hl=en}{Google Scholar}
+\href{https://yaghoub-rahimi.github.io/}{yaghoub-rahimi.github.io} & \hspace{0.5in}  \href{https://scholar.google.com/citations?user=u2n-iosAAAAJ&hl=en}{Google Scholar}
 % \\
 % & \hspace{0.5in}  \href{https://www.researchgate.net/profile/Yaghoub-Rahimi-2}{Researchgate}
 \end{tabular}
@@ -168,7 +180,7 @@ Louisiana State University, & \hspace{0.5in}  Email: yrahim1@lsu.edu
 	    \end{innerlist}
 
 
-\item B.Sc in Applied Mathematics \hfill September 2009 - 2013
+\item B.Sc. in Applied Mathematics \hfill September 2009 - 2013
 \newline
 \href{http://shirazu.ac.ir/en}{\textbf{Shiraz University}}
 
@@ -183,7 +195,9 @@ Louisiana State University, & \hspace{0.5in}  Email: yrahim1@lsu.edu
 %\item{Differential Geometry, and It's Applications}
 \item{Discrete Harmonic Analysis}
 % \item{Ergodic Theory}
-\item{Number Theory}
+\item{Analytic Number Theory and Additive Problems}
+\item{Restricted-Digit and Cantor-Type Arithmetic Sets}
+\item{Sparse Signal Recovery and Nonconvex Optimization}
 \item{Dynamical Systems}
 % \item{Probabilistic Methods and Combinatorics}
 % \item{Compressed Sensing, Sparse Signal Recovery}
@@ -193,48 +207,59 @@ Louisiana State University, & \hspace{0.5in}  Email: yrahim1@lsu.edu
 %\item{Neural Network, Deep Learning}
 \end{compactitem}
 
-\section{Publications}
+\section{Publications and Preprints}
 \vspace{2 mm}
 
+\textbf{Preprints}
 \begin{enumerate}
+\publication{Primes with Restricted-Digit Differences}
+    {Rui Han and Fan Yang.}
+    {Preprint, 2026. arXiv:2609.05810.}
+    {\href{https://arxiv.org/abs/2609.05810}{arXiv} $\vert$ \href{https://arxiv.org/pdf/2609.05810}{PDF}}
 
+\publication{On the small denominator problem for generalized Minkowski--Funk transforms}
+    {Rui Han.}
+    {Preprint, 2026. arXiv:2601.09547.}
+    {\href{https://arxiv.org/abs/2601.09547}{arXiv} $\vert$ \href{https://arxiv.org/pdf/2601.09547}{PDF}}
 
-\item \textit{A Density Theorem for Higher Order Sums of Prime Numbers}, with Michael T Lacey, Hamed Mousavi, and Manasa N Vempati, November 2024, \href{https://arxiv.org/abs/2411.01296}{arXiv}
+\publication{Averages over the Gaussian Primes: Goldbach's Conjecture and Improving Estimates}
+    {Christina Giannitsi, Ben Krause, Michael T. Lacey, and Hamed Mousavi.}
+    {Preprint, 2023. arXiv:2309.14249.}
+    {\href{https://arxiv.org/abs/2309.14249}{arXiv} $\vert$ \href{https://arxiv.org/pdf/2309.14249}{PDF}}
+\end{enumerate}
 
-\item \textit{Averages over the Gaussian Primes: Goldbach's Conjecture and Improving Estimates}, with Christina Giannitsi, Ben Krause, Michael T. Lacey, and Hamed Mousavi,  (Submitted), October 2023,
-\href{https://arxiv.org/abs/2309.14249}{arXiv}
-% to \textit{The Journal of the London Mathematical Society,}
+\Needspace{7\baselineskip}
+\noindent\textbf{Published articles}
+\begin{enumerate}
+\publication{A density theorem for higher-order sums of prime numbers}
+    {Michael T. Lacey, Hamed Mousavi, and Manasa N. Vempati.}
+    {\textit{Research in the Mathematical Sciences} 13, Article 17, 2026.}
+    {\href{https://arxiv.org/abs/2411.01296}{arXiv} $\vert$ \href{https://doi.org/10.1007/s40687-025-00597-5}{Journal} $\vert$ \href{https://arxiv.org/pdf/2411.01296}{PDF}}
 
+\publication{A lifted $\ell_1$ framework for sparse recovery}
+    {Sung Ha Kang and Yifei Lou.}
+    {\textit{Information and Inference: A Journal of the IMA} 13(1), iaad055, 2024.}
+    {\href{https://arxiv.org/abs/2203.05125}{arXiv} $\vert$ \href{https://doi.org/10.1093/imaiai/iaad055}{Journal} $\vert$ \href{https://arxiv.org/pdf/2203.05125}{PDF}}
 
+\publication{Endpoint $\ell^r$ improving estimates for prime averages}
+    {Michael T. Lacey and Hamed Mousavi.}
+    {\textit{Mathematical Research Letters} 29(6), 1767--1791, 2022.}
+    {\href{https://arxiv.org/abs/2101.10401}{arXiv} $\vert$ \href{https://doi.org/10.4310/MRL.2022.v29.n6.a6}{Journal} $\vert$ \href{https://arxiv.org/pdf/2101.10401}{PDF}}
 
+\publication{Improving and maximal inequalities for primes in progressions}
+    {Christina Giannitsi, Michael T. Lacey, and Hamed Mousavi.}
+    {\textit{Banach Journal of Mathematical Analysis} 16, Article 42, 2022.}
+    {\href{https://arxiv.org/abs/2112.07700}{arXiv} $\vert$ \href{https://doi.org/10.1007/s43037-022-00191-9}{Journal} $\vert$ \href{https://arxiv.org/pdf/2112.07700}{PDF}}
 
-\item \textit{Endpoint $ \ell^r$ improving estimates for Prime averages}, with
-Michael T. Lacey and Hamed Mousavi, Published at
-\textit{Mathematical Research Letters,} May 2023, at \href{https://arxiv.org/pdf/2101.10401.pdf}{arXiv}, \href{https://dx.doi.org/10.4310/MRL.2022.v29.n6.a6}{Journal}
+\publication{Accelerated schemes for the $L_1/L_2$ minimization}
+    {Chao Wang, Ming Yan, and Yifei Lou.}
+    {\textit{IEEE Transactions on Signal Processing} 68, 2660--2669, 2020.}
+    {\href{https://arxiv.org/abs/1905.08946}{arXiv} $\vert$ \href{https://doi.org/10.1109/TSP.2020.2985298}{Journal} $\vert$ \href{https://arxiv.org/pdf/1905.08946}{PDF} $\vert$ \href{https://github.com/yflouucla/L1dL2}{Code}}
 
-
-
-\item \textit{Improving and Maximal Inequalities for Primes in Progressions}, with
-Christina Giannitsi, Michael T. Lacey, and Hamed Mousavi,  Published at \textit{Banach Journal of Mathematical Analysis,} March 2022,
-\href{https://arxiv.org/pdf/2112.07700.pdf}{arXiv}, \href{https://link.springer.com/article/10.1007/s43037-022-00191-9}{Journal}
-
-
-
-
-\item \textit{A Lifted $ \ell_1$ Framework for Sparse Recovery}, with Sung Ha Kang and Yifei Lou,  Published at \textit{Information and Inference: A Journal of the IMA,} April 2024, \href{https://arxiv.org/pdf/2203.05125.pdf}{arXiv}, \href{https://academic.oup.com/imaiai/article-abstract/13/1/iaad055/7536060}{Journal}
-
-
-\item \textit{Accelerated Schemes for the L1/L2 Minimization}, with
-Chao Wang, Ming Yan, and Yifei Lou,
-Published at \textit{IEEE Transactions on Signal Processing}, Volume 68, Pages 2660-2669, April 2020, \href{https://arxiv.org/pdf/1905.08946.pdf}{arXiv}, \href{https://ieeexplore.ieee.org/abstract/document/9057443}{Journal}
-
-\item \textit{A Scale Invariant Approach for Sparse Signal
-Recovery}, with
-Chao Wang, Hongbo Dong, and Yifei Lou,
- Published at \textit{SIAM Journal on Scientific Computing}, Volume 41, Issue 6, Pages A3649-A3672, August 2019, \href{https://arxiv.org/pdf/1812.08852.pdf}{arXiv}, \href{https://epubs.siam.org/doi/abs/10.1137/18M123147X}{Journal}
-
-
-
+\publication{A scale-invariant approach for sparse signal recovery}
+    {Chao Wang, Hongbo Dong, and Yifei Lou.}
+    {\textit{SIAM Journal on Scientific Computing} 41(6), A3649--A3672, 2019.}
+    {\href{https://arxiv.org/abs/1812.08852}{arXiv} $\vert$ \href{https://doi.org/10.1137/18M123147X}{Journal} $\vert$ \href{https://arxiv.org/pdf/1812.08852}{PDF} $\vert$ \href{https://github.com/yflouucla/L1dL2}{Code}}
 \end{enumerate}
 
 
@@ -247,18 +272,22 @@ Chao Wang, Hongbo Dong, and Yifei Lou,
 
 \begin{innerlist}[-]
 
+\item {\bf A Density Theorem for Higher-Order Sums of Prime Numbers}, Talk at the \href{https://www.math.lsu.edu/calendar?selectevent=Harmonic+Analysis+Seminar&selecttime=all}{Harmonic Analysis Seminar}, Louisiana State University, Baton Rouge, LA, May 6, 2026.
 
-\item {\bf A Density Theorem for Higher Order Sums of Prime Numbers}, Talk at \href{https://www.math.lsu.edu/~srntc/nt2025/}{Southern Regional Number Theory Conference 2025}, March 2025, at Louisiana State University, Baton Rouge, LA.
+\item {\bf A Density Theorem for Higher-Order Sums of Prime Numbers}, Talk at the \href{https://www.math.lsu.edu/~ha2025/}{Southern Regional Harmonic Analysis Conference}, Louisiana State University, Baton Rouge, LA, November 1, 2025.
 
+\item {\bf Improving Averages over the Prime Numbers and Goldbach's Conjecture}, \href{https://math.gatech.edu/seminars-colloquia/series/dissertation-defense/yaghoub-rahimi-20250703}{Ph.D. dissertation defense}, Georgia Institute of Technology, July 3, 2025.
 
-\item {\bf Average over the Gaussian Primes: Improving Estimates and Goldbach’s Conjecture}, Talk at {Louisiana State University}, Feb 2024, Online Seminar.
+\item {\bf A Density Theorem for Higher-Order Sums of Prime Numbers}, Talk at \href{https://www.math.lsu.edu/~srntc/nt2025/schedule.html}{Southern Regional Number Theory Conference 2025}, Louisiana State University, Baton Rouge, LA, March 29, 2025.
+
+\item {\bf Averages over the Gaussian Primes: Improving Estimates and Goldbach's Conjecture}, Talk at the Harmonic Analysis Seminar, Louisiana State University (online), February 28, 2024.
 
 
 
 \item {\bf Explicit Construction of RIP Matrices and Related Problems}, Talk at \href{https://sites.google.com/view/paata/heat}{Heat Flow, two-point inequalities, and beyond Summer School}, Oct 2023, Online Workshop.
 
-\item {\bf Endpoint $\ell_p $ Improving Estimates for Prime Averages}, Talk at \href{http://www.theoryofnumbers.com/cant/}{Combinatorial and Additive Number Theory Seminar (CANT)}, May 2021, Online Conference.
-\item  {\bf A Scale Invariant Approach for Sparse Signal Recovery}, Poster Presentation, The University of Texas at Dallas, USA, Spring 2019
+\item {\bf Endpoint $\ell^p$ Improving Estimates for Prime Averages}, Talk at \href{https://www.theoryofnumbers.com/cant/CANT2021-program.pdf}{Combinatorial and Additive Number Theory Seminar (CANT)}, May 28, 2021, Online Conference.
+\item  {\bf A Scale-Invariant Approach for Sparse Signal Recovery}, Poster Presentation, The University of Texas at Dallas, USA, Spring 2019
 \item {\bf Training Neural Networks}, Talk in the Image and Signal Analysis Journal Club, The University of Texas at Dallas, USA, Spring 2019
 \item{{\bf Sparse Signal Recovery Using $\ell_1/\ell_2 $}, Talk in the Image and Signal Analysis Journal Club, The University of Texas at Dallas, USA, Fall 2018}
 \item{{\bf On Logistic Regression}, Talk in the Image and Signal Analysis Journal Club, The University of Texas at Dallas, USA, Fall 2017}
@@ -276,9 +305,10 @@ Chao Wang, Hongbo Dong, and Yifei Lou,
 \section{Honors}
 \vspace{2 mm}
 \begin{compactitem}
-\item Research Assistant supported by NSF Grant (M, Lacey. DMS-1949206), Georgia Institute of Technology,
+\item \href{https://math.gatech.edu/graduate/graduate-student-awards-and-honors}{Outstanding TA Award}, Georgia Institute of Technology, 2025.
+\item Research Assistant supported by NSF Grant (M. Lacey, DMS-1949206), Georgia Institute of Technology,
 USA, Summer 2021.
-\item Research prize supported by NSF Grant (M, Lacey), \$2500, Georgia Institute of Technology, Spring 2021
+\item Research prize supported by NSF Grant (M. Lacey), \$2500, Georgia Institute of Technology, Spring 2021
 \item{David L. Brown Fellowship Award, \$500, Georgia Institute of Technology, USA, April 2020}
 \item Research Assistant supported by NSF Grant (Yifei Lou. DMS-1522786), The University of Texas at Dallas, 2017-2018.
 \item{Third Prize (Bronze Medal) in 20th International Mathematics Competition for University Students, American University in Bulgaria, Blagoevgrad, Bulgaria, August 2013}
@@ -318,53 +348,54 @@ USA, Summer 2021.
 
 
 
-\section{ Experiences \& Activities }
+\section{Experience \& Activities}
 \vspace{2 mm}
 \begin{compactitem}
-\item{Research Assistance, Supervisor: Dr. Michael Lacey, Georgia Institute of Technology, 2023-2024}
-\item{Teaching Assistance, Georgia Institute of Technology, 2019-current}
-\item{Research Assistance, Supervisor: Dr. Yifei Lou, The University of Texas at Dallas, 2017-2018}
-\item{Teaching Assistance, The University of Texas at Dallas, 2016-2017,2018-2019}
+\item{Research Assistant, Supervisor: Dr. Michael Lacey, Georgia Institute of Technology, 2023--2024}
+\item{Teaching Assistant, Georgia Institute of Technology, Fall 2019--Spring 2025}
+\item{Research Assistant, Supervisor: Dr. Yifei Lou, The University of Texas at Dallas, 2017--2018}
+\item{Teaching Assistant, The University of Texas at Dallas, 2016--2017, 2018--2019}
 \item{Student Worker, The University of Texas at Dallas, Summer 2019, Summer 2018 }
 \item Active Mentor in the Directed Research Program (DRP), the University of Texas at Dallas, Fall 2018, Spring 2019, Fall 2019.
-\item{Collaboration with “Kolbeh Afarinesh Fekr” Company, Games and Mathematics Exhibitions, Tehran, Iran, 2015}
+\item{Collaboration with ``Kolbeh Afarinesh Fekr'' Company, Games and Mathematics Exhibitions, Tehran, Iran, 2015}
 \item{Instructor of Mathematics Olympiad in High Schools, Shiraz, Iran, 2012}
 \item{Coach of the Shiraz University Team in 39th Iranian Mathematics Competition, Yazd University, Yazd, Iran, May 2015}
-\item{Cooperate with Mathematics Society in Shiraz University, Shiraz, Iran, 2012}
-\item{Teaching Assistance, Shiraz University, 2011-2012,2012-2013}
+\item{Collaboration with the Mathematics Society at Shiraz University, Shiraz, Iran, 2012}
+\item{Teaching Assistant, Shiraz University, 2011--2012, 2012--2013}
 \item{Design and Implementation of "Storage System of a Market" (Using Python)}
 \item{Implementation of Snake Game (Pygame and OpenGL C++)}
 \end{compactitem}
 
 
-\section{Teaching Experiences}
+\section{Teaching Experience}
 \begin{itemize}
 \vspace{0.1in}
 
 \item MATH 2057, Multivariable Calculus, Fall 2025 and Spring 2026, Louisiana State University
 
-\item  Math 1554, Linear Algebra, Fall 2023, Georgia Institute of Technology
+\item MATH 1554, Linear Algebra, Fall 2023, Georgia Institute of Technology
 
-\item Math 2551, Multivariable Calculus, Summer 2023, Georgia Institute of Technology
+\item MATH 2551, Multivariable Calculus, Summer 2023, Georgia Institute of Technology
 
 \end{itemize}
 
 
-\section{TA Experiences}
+\Needspace{13\baselineskip}
+\section{Teaching Assistant Experience}
 
 \begin{innerlist}
 
-\item Georgia Institute of Technology (Fall 2019-present):
+\item Georgia Institute of Technology (Fall 2019--Spring 2025):
 \begin{innerlist}[-]
-\item  Differential Equations, Algebra I,II, Multivariable Calculus.
+\item Differential Equations (MATH 2552, Fall 2019), Algebra I and II, Multivariable Calculus.
 \end{innerlist}
-\item University of Texas at Dallas (Fall 2016-Summer 2019):
+\item The University of Texas at Dallas (Fall 2016--Summer 2019):
 \begin{innerlist}[-]
-\item  Topology, Differential Calculus, Applied Calculus I,II, Calculus I,II.
+\item Topology, Differential Calculus, Applied Calculus I and II, Calculus I and II.
 \end{innerlist}
-\item Shiraz University (Fall 2010-Spring 2013):
+\item Shiraz University (Fall 2010--Spring 2013):
 \begin{innerlist}[-]
-\item  Foundation of Geometry, Linear algebra I, Computer Foundation and Programming, Elementary Matrix and Linear Algebra, Foundation of Mathematics.
+\item Foundation of Geometry, Linear Algebra I, Computer Foundation and Programming, Elementary Matrix and Linear Algebra, Foundation of Mathematics.
 \end{innerlist}
 
 \end{innerlist}
@@ -386,11 +417,11 @@ USA, Summer 2021.
 %\end{innerlist}
 %
 
-\section{ Membership }
+\section{Membership}
 \vspace{2 mm}
 \begin{innerlist}
-\item Member of American Mathematics Society, 2019-present
-\item Member of Organizing Committee, Workshop on Recent Developments on Mathematical/Statistical approaches in {\it Data Science} (MSDAS), Department of Mathematical Sciences, The University of Texas at Dallas, May 31-Jun 2, 2019 \href{https://sites.google.com/site/utd2019workshop/home}{link}
+\item Member of the American Mathematical Society, 2019--present
+\item Member of the Organizing Committee, \href{https://sites.google.com/site/utd2019workshop/home}{Workshop on Recent Developments on Mathematical/\allowbreak Statistical Approaches in Data Science (MSDAS)}, Department of Mathematical Sciences, The University of Texas at Dallas, May 31--June 2, 2019.
 \item{Member of Image and Signal Analysis Journal Club, UTD, 2016-2019}
 \end{innerlist}
 

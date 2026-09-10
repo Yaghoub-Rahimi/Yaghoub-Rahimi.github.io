@@ -46,7 +46,7 @@ a:focus-visible,
 button:focus-visible,
 iframe:focus-visible,
 object:focus-visible {
-  outline: 3px solid rgba(75, 46, 114, 0.28);
+  outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
 
@@ -206,6 +206,20 @@ img {
   min-width: 0;
   max-width: var(--content-width);
   padding-bottom: 3.75rem;
+  overflow-wrap: break-word;
+}
+
+.content:focus {
+  outline: none;
+}
+
+.content :target {
+  scroll-margin-top: 1rem;
+}
+
+.error-page .shell {
+  grid-template-columns: minmax(0, var(--content-width));
+  justify-content: center;
 }
 
 h1,
@@ -531,11 +545,30 @@ footer {
   }
 
   .nav {
-    gap: 0.12rem 0.68rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, max-content);
+    justify-content: space-between;
+    gap: 0.12rem 0.5rem;
   }
 
   .nav a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    min-width: 44px;
     font-size: 0.86rem;
+  }
+
+  .button {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  .sidebar {
+    margin-bottom: 1.35rem;
+    padding-bottom: 1rem;
   }
 
   .profile {
@@ -548,12 +581,19 @@ footer {
   }
 
   .profile-section {
-    margin-top: 0.8rem;
+    margin-top: 0.55rem;
     grid-column: 1 / -1;
   }
 
   .profile-section.links {
+    margin-top: 0.55rem;
     grid-column: 1 / -1;
+  }
+
+  .profile-section:not(.links) ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.08rem 0.85rem;
   }
 
   h1 {
@@ -574,7 +614,13 @@ footer {
   }
 
   .cv-frame {
-    height: 560px;
+    display: none;
+  }
+}
+
+@media (max-height: 680px) and (min-width: 941px) {
+  .sidebar {
+    position: static;
   }
 }
 
@@ -607,5 +653,17 @@ footer {
   a {
     color: #000;
     text-decoration: none;
+  }
+
+  h1,
+  h2,
+  h3 {
+    break-after: avoid;
+  }
+
+  .publication-list > li,
+  .timeline > li,
+  .role-list > li {
+    break-inside: avoid;
   }
 }
