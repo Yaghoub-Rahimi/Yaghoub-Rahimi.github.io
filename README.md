@@ -14,6 +14,7 @@ The site uses plain HTML and CSS. It has no build step, package manager, or Jeky
 - `notes.html` — placeholder for future notes
 - `cv.html` — CV downloads and PDF preview
 - `contact.html` — LSU contact information and academic profiles
+- `ams-2027.html` — special-session details and abstract for the AMS Spring 2027 Southeastern Sectional Meeting
 - `404.html` — a helpful page for missing addresses on GitHub Pages
 - `sitemap.xml` and `robots.txt` — public-page discovery for search engines
 - `assets/styles.css` — site-wide design and responsive layout
@@ -35,7 +36,7 @@ Then open `http://127.0.0.1:8000/`. Stop the server with `Ctrl+C`.
 
 ## Edit content
 
-The navigation, sidebar, and footer are repeated in each HTML file so that the site remains build-free. When changing shared information such as the email address or job title, update all eight content pages; keep the navigation on `404.html` in sync too. Searching the project for the old text is the safest way to find every copy. Update the affected pages' footer dates when reviewing their content, and add any new public page to `sitemap.xml`.
+The navigation, sidebar, and footer are repeated in each HTML file so that the site remains build-free. When changing shared information such as the email address or job title, update all nine content pages, including the session page; keep the navigation on `404.html` in sync too. Searching the project for the old text is the safest way to find every copy. Update the affected pages' footer dates when reviewing their content, and add any new public page to `sitemap.xml`.
 
 Unconfirmed content is marked with `TODO(content)` inside HTML comments. These comments are not visible on the published site.
 
@@ -98,6 +99,10 @@ Add the newest item to the appropriate ordered list in `publications.html`. Use 
 Announce a new paper at the top of the Recent news list in `index.html`, with the posting date, title, coauthors, and arXiv link. If it develops a research theme, update the relevant paragraph in `research.html` and link to the publication entry using its `id`.
 
 Add the same citation to `assets/files/Yaghoub_Rahimi_CV.tex` and rebuild the PDF. Use “Preprint” unless a journal status has been confirmed.
+
+### Update the AMS special session
+
+Edit `ams-2027.html` for the session abstract and meeting details. Add co-organizers, speakers, and the schedule only once confirmed, and link to the public AMS session listing when it becomes available. Do not upload organizer emails, private access links, or unpublished submissions. Keep the homepage announcement brief and link it to this page.
 
 ### Add a talk
 
