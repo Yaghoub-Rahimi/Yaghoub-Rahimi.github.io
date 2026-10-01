@@ -5,3 +5,5 @@
 *.log
 *.out
 *.toc
+# Keep the editable CV source private; publish only its PDF.
+/assets/files/Yaghoub_Rahimi_CV.tex
