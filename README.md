@@ -20,7 +20,7 @@ The site uses plain HTML and CSS. It has no build step, package manager, or Jeky
 - `assets/styles.css` — site-wide design and responsive layout
 - `assets/favicon.svg` — small YR icon for browser tabs
 - `assets/og.jpg` — social-preview image used when the site is shared
-- `assets/profile-placeholder.svg` — temporary profile image
+- `assets/profile.png` — profile portrait
 - `assets/files/Yaghoub_Rahimi_CV.pdf` — downloadable CV
 
 ## Preview locally
@@ -47,20 +47,10 @@ After changing the shared CSS, update the `?v=...` value in every stylesheet lin
 
 ### Replace the profile photo
 
-1. Add a square professional photograph at `assets/profile.jpg` (at least 500 × 500 pixels is recommended).
-2. In every HTML file, replace:
-
-   ```html
-   src="assets/profile-placeholder.svg"
-   ```
-
-   with:
-
-   ```html
-   src="assets/profile.jpg"
-   ```
-
-3. Change the empty `alt=""` to a concise description if the photo conveys information not already supplied by the adjacent name.
+1. Replace `assets/profile.png` with your new portrait. Keeping the filename unchanged preserves the photo on all nine sidebar pages.
+2. If the new image has different dimensions, update the image's `width` and `height` attributes on those pages. The existing CSS displays a circular crop without changing the original photo.
+3. Adjust `object-position` in `assets/styles.css` if needed to frame the face. The current portrait uses `50% 25%`; keep the small desktop and mobile sizes.
+4. The empty `alt=""` is intentional because the adjacent name already identifies the person. Add descriptive text only if a replacement conveys additional information.
 
 ### Replace the CV
 
