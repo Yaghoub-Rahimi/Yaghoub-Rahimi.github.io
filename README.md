@@ -6,7 +6,7 @@ The site uses plain HTML and CSS. It has no build step, package manager, or Jeky
 
 ## Site files
 
-- `index.html` — concise biography, current research direction, and recent news
+- `index.html` — biography, LSU/TIAMS affiliations, research interests, and recent news
 - `research.html` — research themes
 - `publications.html` — publications and preprints
 - `talks.html` — selected talks in reverse chronological order and professional service
@@ -38,6 +38,8 @@ Then open `http://127.0.0.1:8000/`. Stop the server with `Ctrl+C`.
 The navigation, sidebar, and footer are repeated in each HTML file so that the site remains build-free. When changing shared information such as the email address or job title, update all nine content pages, including the session page; keep the navigation on `404.html` in sync too. Searching the project for the old text is the safest way to find every copy. Update the affected pages' footer dates when reviewing their content, and add any new public page to `sitemap.xml`.
 
 Unconfirmed content is marked with `TODO(content)` inside HTML comments. These comments are not visible on the published site. Do not infer a talk from conference attendance or change a preprint's status without a confirmed journal record.
+
+The TIAMS postdoctoral fellowship is linked from the homepage biography, every profile sidebar, and Contact using the [official LSU TIAMS fellows listing](https://www.lsu.edu/tiams/people/fellows.php). Keep the existing homepage and Research-page organization unless a broader rewrite is explicitly requested.
 
 Notes is intentionally omitted from every main navigation and from the sitemap while it has no material. When ready, populate `notes.html`, remove its `noindex` metadata, and restore its navigation and sitemap entries.
 
