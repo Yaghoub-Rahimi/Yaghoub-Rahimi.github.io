@@ -49,7 +49,7 @@ After changing the shared CSS, update the `?v=...` value in every stylesheet lin
 
 1. Replace `assets/profile.png` with your new portrait. Keeping the filename unchanged preserves the photo on all nine sidebar pages.
 2. If the new image has different dimensions, update the image's `width` and `height` attributes on those pages. The existing CSS displays a circular crop without changing the original photo.
-3. Adjust `object-position` in `assets/styles.css` if needed to frame the face. The current portrait uses `50% 25%`; keep the small desktop and mobile sizes.
+3. Adjust the framing in `.profile-photo > img` in `assets/styles.css` if needed for a different portrait. The current crop uses a modest zoom and offsets to center the face, while the outer circle keeps the same desktop and mobile sizes. The original photo stays unchanged.
 4. The empty `alt=""` is intentional because the adjacent name already identifies the person. Add descriptive text only if a replacement conveys additional information.
 
 ### Replace the CV
