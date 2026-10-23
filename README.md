@@ -58,7 +58,7 @@ Replace only `assets/files/Yaghoub_Rahimi_CV.pdf`, keeping its filename unchange
 
 Keep the editable LaTeX source outside this public checkout. Compile the private source twice with a LaTeX distribution, writing auxiliary files to a temporary build directory, and copy only the finished PDF into `assets/files/`. The source is intentionally not offered as a public download; older versions remain in Git history.
 
-Check the resulting PDF's page breaks and links, and update its explicit date and the date shown on `cv.html`. The current CV is dated October 1, 2026, incorporating the September version's contents and subsequent updates. On phones, the CV page offers direct PDF links instead of a small embedded viewer.
+Check the resulting PDF's page breaks and links, and update its explicit date and the date shown on `cv.html`. The current CV is dated October 23, 2026, incorporating the September version's contents and subsequent updates. On phones, the CV page offers direct PDF links instead of a small embedded viewer.
 
 ### Add a publication
 
